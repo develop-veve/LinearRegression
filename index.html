@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Page</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#" @click="changePage('home')">HOME</a></li>
+          <li><a href="#" @click="changePage('business')">事業紹介</a></li>
+          <li><a href="#" @click="changePage('company')">会社概要</a></li>
+          <li><a href="#" @click="changePage('location')">所在地</a></li>
+          <li><a href="#" @click="changePage('recruit')">リクルート</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div v-if="currentPage === 'home'"><h1>HOMEページのコンテンツ</h1><p>ここにHOMEページの詳細な説明が入ります。</p></div>
+      <div v-if="currentPage === 'business'"><h1>事業紹介ページのコンテンツ</h1><p>ここに事業紹介ページの詳細な説明が入ります。</p></div>
+      <div v-if="currentPage === 'company'"><h1>会社概要ページのコンテンツ</h1><p>ここに会社概要ページの詳細な説明が入ります。</p></div>
+      <div v-if="currentPage === 'location'"><h1>所在地ページのコンテンツ</h1><p>ここに所在地ページの詳細な説明が入ります。</p></div>
+      <div v-if="currentPage === 'recruit'"><h1>リクルートページのコンテンツ</h1><p>ここにリクルートページの詳細な説明が入ります。</p></div>
+    </main>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
